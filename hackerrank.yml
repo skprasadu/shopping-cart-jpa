@@ -1,0 +1,16 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  readonly_paths:
+    - src/test/*
+  scoring:
+    command: mvn clean test
+    files:
+      - target/surefire-reports/TEST-com.example.jdbcdemo.service.ShoppingCartServiceImplTest.xml
+  ide_config:
+    default_open_files:
+      - src/main/java/com/example/jdbcdemo/model/Cart.java
+      - src/main/java/com/example/jdbcdemo/model/Item.java
+      - src/main/java/com/example/jdbcdemo/service/CartService.java
+    project_menu:
+      test: mvn clean test
